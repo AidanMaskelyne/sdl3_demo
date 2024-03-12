@@ -6,7 +6,7 @@ project(
 	LANGUAGES CXX
 )
 
-option(USE_SYSTEM_SDL3 "Use the system's libraries" OFF)
+option(USE_SYSTEM_SDL3 "Use the system version of SDL" OFF)
 
 if (NOT USE_SYSTEM_SDL3)
 	add_subdirectory(deps/SDL EXCLUDE_FROM_ALL)
