@@ -8,7 +8,7 @@ project(
 
 option(USE_SYSTEM_SDL3 "Use the system's libraries" OFF)
 
-if (SDL3DEMO_VENDORED)
+if (NOT USE_SYSTEM_SDL3)
 	add_subdirectory(deps/SDL EXCLUDE_FROM_ALL)
 else()
 	find_package(SDL3 REQUIRED CONFIG REQUIRED COMPONENTS SDL3-shared)
