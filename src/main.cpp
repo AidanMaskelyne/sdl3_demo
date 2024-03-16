@@ -2,7 +2,6 @@
 #include <SDL3/SDL_events.h>
 
 #include "Config.h"
-#include "INI.h"
 
 void toggle_fullscreen(SDL_Window* window)
 {
@@ -31,11 +30,6 @@ void load_application_settings()
 
 int main(int argc, char *argv[])
 {
-	Settings app_settings;
-	parse_ini(std::nullopt, &app_settings);
-	return 0;
-
-
 	SDL_Window *window;
 	SDL_Renderer *renderer;
 

@@ -4,23 +4,6 @@
 #include <filesystem>
 #include <optional>
 
-#include <SDL_log.h>
-
-enum DisplayMode {
-	Fullscreen,
-	Windowed,
-};
-
-struct Settings_General {
-
-};
-
-struct Settings_Display {
-	int width;
-	int height;
-	DisplayMode display_mode;
-};
-
 class Config
 {
 public:
@@ -30,9 +13,5 @@ public:
 	 * 
 	 * @param file_path - Path to a .ini file
 	 */
-	void load(std::optional<std::filesystem::path> file_path);
-
-private:
-	/* Each struct of options is a heading in the INI file */
-	Settings_Display display_settings;	// e.g. [Display] heading
+	int load(std::optional<std::filesystem::path> file_path);
 };
