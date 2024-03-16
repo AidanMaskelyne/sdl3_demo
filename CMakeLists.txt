@@ -32,8 +32,6 @@ add_executable(SDL3Demo
 
 	src/Config.h
 	src/Config.cpp
-
-	src/INI.h
 )
 
 # Set `SDL3Demo` as the startup project in Visual Studio
