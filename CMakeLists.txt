@@ -30,6 +30,15 @@ endif()
 add_executable(SDL3Demo
 	src/main.cpp
 
+	src/Video.h
+	src/Video.cpp
+
+	src/Input.h
+	src/Input.cpp
+
+	src/Event.h
+	src/Event.cpp
+
 	src/Config.h
 	src/Config.cpp
 )
@@ -38,3 +47,4 @@ add_executable(SDL3Demo
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT SDL3Demo)
 
 target_link_libraries(SDL3Demo PRIVATE SDL3::SDL3)
+target_include_directories(SDL3Demo PRIVATE deps/tomlplusplus/include)
